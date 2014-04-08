@@ -1,0 +1,14 @@
+{
+  "name": "sugar-step",
+  "version": "0.0.0",
+  "description": "Syntactic Sugar for handling asynchronous step definitions in Cucumber-JS",
+  "main": "sugar-step.litcoffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lukas Degener",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "promise": "^4.0.0"
+  }
+}
