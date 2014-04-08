@@ -6,11 +6,11 @@ Syntactic sugar for handling asynchronous step definitions in cucumber-js
 The idea is that instead of this
 
 ``` coffeescript
-  Given /$I have a trivial, synchronous step^/, callback ->
+  Given /$I have a trivial, synchronous step^/, (callback) ->
     trivial.but.intersting.stuff()
     callback()
 
-  And /$there is also a non-trivial, asynchronous stuff using promises and what not^/, callback ->
+  And /$there is also non-trivial, asynchronous stuff^/, (callback) ->
     do.stuff.that.produces.a.promise().then(
       () ->
         callback(), 
@@ -25,7 +25,7 @@ you would generally prefer to write this instead:
   Given /$I have a trivial, synchronous step^/, ->
     trivial.but.intersting.stuff()
 
-  And /$there is also a non-trivial, asynchronous stuff using promises and what not^/, ->
+  And /$there is also a non-trivial, asynchronous stuff^/, ->
     do.stuff.that.produces.a.promise()
 ```
 
@@ -36,7 +36,7 @@ But out-of-the-box, cucumber-js won't let you do that, so I started looking for 
 
 then this one may be just for you.
 
-For a more detailed explanation of the How and the Why, please refer to [the implementation](./sugar-step.litcoffee).
+For a more detailed explanation of the How and the Why, please refer to [the implementation](./src/sugar-step.litcoffee).
 
 Installation
 ------------
