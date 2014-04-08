@@ -41,7 +41,9 @@ For a more detailed explanation of the How and the Why, please refer to [the imp
 Installation
 ------------
 
-tbd.
+```
+npm install sugar-step
+```
 
 Usage
 -----
