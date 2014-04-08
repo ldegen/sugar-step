@@ -1,14 +1,21 @@
 {
   "name": "sugar-step",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Syntactic Sugar for handling asynchronous step definitions in Cucumber-JS",
-  "main": "sugar-step.litcoffee",
+  "main": "lib/sugar-step.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine-node --coffee . && cucumber.js",
+    "prepublish":"coffee --compile --output lib src"
   },
-  "author": "Lukas Degener",
+  "author": "Lukas Degener <l.degener@tarent.de>",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "promise": "^4.0.0"
+    "promise": "^4.0.0",
+    "jasmine-node":"*",
+    "cucumber":"^0.4.0"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "git@github.com:ldegen/sugar-step.git"
   }
 }

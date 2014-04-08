@@ -1,5 +1,5 @@
 describe "A Sugar Step", ->
-  SugarStep = require "../sugar-step"
+  SugarStep = require "../src/sugar-step"
   step = undefined
   originalDefineStep = undefined
   callback = undefined

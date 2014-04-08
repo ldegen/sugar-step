@@ -1,7 +1,7 @@
 Promise = require "promise"
 module.exports = ->
   @World = require("../support/world.coffee").World
-  SugarStep = require "../../sugar-step.litcoffee"
+  SugarStep = require "../../src/sugar-step.litcoffee"
 
   # Normally, there would be no need to put this in a before hook.
   @Before (callback)->
