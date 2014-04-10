@@ -50,13 +50,14 @@ Usage
 Something like this:
 
 ``` coffeescript
-# wrap the original step definition directive
 SugarStep = require 'sugar-step'
-Given = When = Then = SugarStep @defineStep
-
-# ... and you're good to go
 
 module.exports = ->
+
+  # wrap the original step definition directive
+  Given = When = Then = SugarStep @defineStep
+
+  # ... and you're good to go
 
   Given /^I have (\d+) cukes in my belly$/, (numberOfCukes) ->
     @belly.cukes=numberOfCukes
