@@ -1,3 +1,10 @@
+UPDATE: This is probably obsolete by now!
+=========================================
+I just learned that since v5.0 Cucumber.js supports promises out-of-the-box.
+I haven't tried it yet, but from the docs it seems that it works just as one would expect.
+So instead of using sugar-step you should probably just upgrade your cucumber.js. :)
+
+
 sugar-step
 ==========
 
@@ -6,11 +13,11 @@ Syntactic sugar for handling asynchronous step definitions in cucumber-js
 The idea is that instead of this
 
 ``` coffeescript
-  Given /$I have a trivial, synchronous step^/, (callback) ->
+  Given /^I have a trivial, synchronous step$/, (callback) ->
     trivial.but.intersting.stuff()
     callback()
 
-  And /$there is also non-trivial, asynchronous stuff^/, (callback) ->
+  And /^there is also non-trivial, asynchronous stuff$/, (callback) ->
     do.stuff.that.produces.a.promise().then(
       () ->
         callback(), 
